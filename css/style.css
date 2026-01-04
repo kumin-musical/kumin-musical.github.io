@@ -1,0 +1,244 @@
+/*全てのページに適用される設定*/
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 0 0;
+}
+p,li,td {
+    line-height: 1.7;
+}
+img {
+    max-width: 100%;
+}
+/*全てのページに適用--ヘッダー*/
+nav {
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    background-color: #255758;
+    color: #FFFFFF;
+    text-align: center;
+
+    a:link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:active {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+.nav ul {
+    margin: 30px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.preserve-space {
+  white-space: pre-wrap;
+}
+.name {
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 0%;
+    margin-bottom: 5px;
+    border-top: 13px solid #255758  ;
+}
+.abautjoin {
+    text-align: center;
+}
+/*全てのページに適用--メイン*/
+main {
+    margin: 90px auto 90px auto;
+    max-width: 1000px;
+}
+main h2  {
+    margin: 60px 0 20px 0;
+    border-bottom: 2px solid #255758;
+    padding: 0 0 5px 0;
+    color: #255758;
+    font-size: 1.3rem;
+}
+main h4 {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: 0 0 0 0;
+    margin-top: 5px;
+}
+main h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.jisseki {
+    margin-bottom: 0;
+}
+/*全てのページに適用--ヒーロー*/
+.hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "メイリオ";
+    font-size: 50px;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 0%;
+}
+.hero.index {
+    font-family: serif; 
+    padding: 287px 0;
+    background-image: url(../images/home-hero.jpg);
+    height: auto;
+    width: 100%;
+}
+.pc-text {
+    display: block;
+}
+.mobile-text {
+    display: none;
+}
+/*全てのページに適用--フッター*/
+.gotoppng {
+    width: 200px ;
+    height: auto;
+    position: fixed;
+    bottom: 20px ;
+    right: 20px ;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.gotoppng:hover {
+    transform: scale(1.2); /* ホバー時に1.2倍に拡大 */
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 35px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #C13584; 
+}
+.copyright {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #255758;
+    color: #FFFFFF;
+    text-align: center;
+}
+/*個別のスタイル*/
+/*index.html*/
+
+.history th, .history td {
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+}
+.history {
+    a:link {
+        color: #3d6dff;
+        text-decoration: none;
+    }
+    a:vsited {
+        color: #8e3dff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #3d6dff;
+        text-decoration: underline;
+    }
+    a:active {
+        color: #f23dff;
+        text-decoration: none;
+    }
+}
+
+.teachers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+.teacher {
+    background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: 0px 0px 13px rgba(0,0,0,0.15);
+      border: 2px solid #255758;
+}
+/*join.html*/
+.boshuchirasi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*モバイル対応*/
+@media (max-width: 767px) {
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    main {
+        padding: 0 2%;
+    }
+
+    /*index.html*/
+    .hero.index {
+        padding: 28vh 0;
+    }
+    .teachers {
+        grid-template-columns: 1fr 1fr;
+    }
+    .pc-text {
+    display: none;
+    }
+    .mobile-text {
+        display: block;
+    }
+    /*join.html*/
+    .boshuchirasi {
+        grid-template-columns: 1fr;
+    }
+    .gotoppng {
+    width: 250px ;
+    height: auto;
+    position: fixed;
+    bottom: 20px ;
+    right: -17% ;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    }
+}
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+    .gotoppng:hover {
+    transform: none
+    }
+    .gotoppng:active {
+        transform: scale(1.2);
+    }
+}
